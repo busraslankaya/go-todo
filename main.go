@@ -24,7 +24,7 @@ const (
 	hostName       string = "localhost:27017"
 	dbName         string = "demo_todo"
 	collectionName string = "todo"
-	port           string = ":9000"
+	port           string = ":8081"
 )
 
 type (
@@ -52,7 +52,7 @@ func init() {
 }
 
 func homeHandler(w http.ResponseWriter, r *http.Request) {
-	err := rnd.Template(w, http.StatusOK, []string{"static/home.tpl"}, nil)
+	err := rnd.Template(w, http.StatusOK, []string{"static/home.html"}, nil)
 	checkErr(err)
 }
 
